@@ -1,0 +1,171 @@
+# --- Experiment configurations --------------------------------------------------------------------
+
+# experiment name, used as folder name
+experiment_name: Final_Results
+
+# files to specify training, validation and test basins (relative to code root or absolute path)
+train_basin_file: ./Data/1_test/train.txt
+validation_basin_file: ./Data/1_test/train_val.txt
+test_basin_file: ./Data/1_test/test.txt
+
+# training, validation and test time periods (format = 'dd/mm/yyyy')
+train_start_date: "01/01/2002"
+train_end_date: "01/08/2022"
+validation_start_date: "01/01/2002"
+validation_end_date: "01/08/2022"
+test_start_date: "01/01/2002"
+test_end_date:  "01/09/2022"
+
+#random seed
+seed: 42
+# which GPU (id) to use [in format of cuda:0, cuda:1 etc, or cpu or None]
+device: cuda:1
+
+# --- Validation configuration ---------------------------------------------------------------------
+
+# specify after how many epochs to perform validation
+validate_every: 0
+
+# specify how many random basins to use for validation
+validate_n_random_basins: 30
+
+# specify which metrics to calculate during validation (see neuralhydrology.evaluation.metrics)
+# this can either be a list or a dictionary. If a dictionary is used, the inner keys must match the name of the
+# target_variable specified below. Using dicts allows for different metrics per target variable.
+metrics:
+  - NSE
+  - RMSE
+  - KGE
+
+# --- Model configuration --------------------------------------------------------------------------
+
+# base model type [lstm, ealstm, cudalstm, embcudalstm, mtslstm]
+# (has to match the if statement in modelzoo/__init__.py)
+model: cudalstm
+
+# prediction head [regression]. Define the head specific parameters below
+head: regression
+
+# ----> Regression settings <----
+output_activation: linear
+
+# ----> General settings <----
+
+# Number of cell states of the LSTM
+hidden_size: 300
+
+# Initial bias value of the forget gate
+initial_forget_bias: 0
+
+# Dropout applied to the output of the LSTM
+output_dropout: 0.3
+
+# --- Training configuration -----------------------------------------------------------------------
+
+# specify optimizer [Adam]
+optimizer: Adam
+
+# specify loss [MSE, NSE, RMSE]
+loss: RMSE
+
+# maximum loss
+allow_subsequent_nan_losses: 80
+
+# specify learning rates to use starting at specific epochs (0 is the initial learning rate)
+learning_rate: 0.000316
+
+# Mini-batch size
+batch_size: 40
+
+# Number of training epochs
+epochs: 8
+
+# If a value, clips the gradients during training to that norm.
+clip_gradient_norm: 1
+
+# Defines which time steps are used to calculate the loss. Can't be larger than seq_length.
+# If use_frequencies is used, this needs to be a dict mapping each frequency to a predict_last_n-value, else an int.
+predict_last_n: 1
+
+# Length of the input sequence
+# If use_frequencies is used, this needs to be a dict mapping each frequency to a seq_length, else an int.
+seq_length: 365
+
+# Number of parallel workers used in the data pipeline
+num_workers: 8
+
+# Log the training loss every n steps
+log_interval: 1
+
+# If true, writes logging results into tensorboard file
+log_tensorboard: True
+
+# If a value and greater than 0, logs n random basins as figures during validation
+log_n_figures: 1
+
+# Save model weights every n epochs
+save_weights_every: 1
+
+# Store the results of the validation to disk
+save_validation_results: True
+# --- Data configurations --------------------------------------------------------------------------
+
+# which data set to use [camels_us, camels_gb, global, hourly_camels_us]
+dataset: generic
+
+# Path to data set root
+data_dir: D:/ShuyuChang/AKTemp/Data/Hyperparameter/1_test
+# Forcing product [daymet, maurer, maurer_extended, nldas, nldas_extended, nldas_hourly]
+# can be either a list of forcings or a single forcing product
+forcings:
+  - maurer
+  - daymet
+  - nldas
+
+dynamic_inputs:
+  - snow_depth_water_equivalent_mean
+  - surface_net_solar_radiation_mean
+  - surface_net_thermal_radiation_mean
+  - temperature_2m_mean
+  - u_component_of_wind_10m_mean
+  - v_component_of_wind_10m_mean
+  - volumetric_soil_water_layer_1_mean
+  - soil_temperature_level_1_mean
+  - total_precipitation_sum
+  - potential_evaporation_sum
+  - surface_runoff_sum
+  - sub_surface_runoff_sum
+
+# which columns to use as target
+target_variables:
+  - mean_temp_c
+
+static_attributes: 
+  - topo_GM90_topo_idx
+  - ha_ppd_pk_uav
+  - ha_for_pc_use
+  - ha_snd_pc_uav
+  - ice_PastickAK_probability
+  - norm_aet
+  - ice_GLIMS_glacier
+  - ha_cmi_ix_uyr
+  - norm_dis
+  - ha_ele_mt_uav
+  - ha_snw_pc_uyr
+  - latitude
+  - ha_tmp_dc_syr
+  - ha_cly_pc_uav
+  - norm_inundation
+  - area_km2
+  - ha_wet_pc_ug1
+  - ha_nli_ix_uav
+  - norm_riverarea
+  - ha_pnv_cl_smj
+  - ha_lit_cl_smj
+  - soil_SG250_soc_15_30
+  - soil_Pelletier_sed_thickness
+  - ha_lka_pc_sse
+  - ha_tmp_dc_s06
+  - ha_tmp_dc_s07
+  - ha_tmp_dc_s08
+  - ha_tmp_dc_s09
