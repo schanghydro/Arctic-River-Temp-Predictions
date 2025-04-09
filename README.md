@@ -22,21 +22,7 @@ The version used for implementation here is v1.9.0.
 
 ## Structure
 
-├───Data
-│   ├───1_test
-│   │   ├───attributes
-│   │   └───time_series
-│   └───Rawdata
-│       └───forcings
-├───runs
-│   └───Final_20230921_2909_103637
-│       ├───img_log
-│       ├───test
-│       │   └───model_epoch008
-│       ├───train
-│       │   └───model_epoch008
-│       └───train_data
-└───Scripts
+![](D:\ShuyuChang\AKTemp\Arctic-River-Temp-Predictions\Structure.png)
 
 #### Data
 
