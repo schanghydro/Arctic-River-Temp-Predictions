@@ -1,4 +1,4 @@
-# Deep Learning Advances Arctic River Temperature Predictions:snowflake:
+# Deep Learning Advances Arctic River Temperature Predictions
 
 This repository contains the data and code associated with the manuscript titled **"Deep Learning Advances Arctic River Temperature Predictions"**, currently in revision with *Water Resources Research*.
 
@@ -22,7 +22,7 @@ The version used for implementation here is v1.9.0.
 
 ## Structure
 
-![](D:\ShuyuChang\AKTemp\Arctic-River-Temp-Predictions\Structure.png)
+<img src="D:\ShuyuChang\AKTemp\Arctic-River-Temp-Predictions\Structure.png" alt="&quot;Repo Structure&quot;" style="zoom:80%;" />
 
 #### Data
 
