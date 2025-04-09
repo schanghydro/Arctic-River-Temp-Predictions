@@ -1,7 +1,7 @@
 # --- Experiment configurations --------------------------------------------------------------------
 
 # experiment name, used as folder name
-experiment_name: Final_Results
+experiment_name: Final_20230921
 
 # files to specify training, validation and test basins (relative to code root or absolute path)
 train_basin_file: ./Data/1_test/train.txt
@@ -114,7 +114,7 @@ save_validation_results: True
 dataset: generic
 
 # Path to data set root
-data_dir: D:/ShuyuChang/AKTemp/Data/Hyperparameter/1_test
+data_dir: ./Data/1_test
 # Forcing product [daymet, maurer, maurer_extended, nldas, nldas_extended, nldas_hourly]
 # can be either a list of forcings or a single forcing product
 forcings:
