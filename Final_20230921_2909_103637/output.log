@@ -1,0 +1,66 @@
+2023-09-29 10:36:37,428: Logging to D:\ShuyuChang\AKTemp\Output\Final_20230921\runs\Final_20230921_2909_103637\output.log initialized.
+2023-09-29 10:36:37,434: ### Folder structure created at D:\ShuyuChang\AKTemp\Output\Final_20230921\runs\Final_20230921_2909_103637
+2023-09-29 10:36:37,435: ### Run configurations for Final_20230921
+2023-09-29 10:36:37,436: experiment_name: Final_20230921
+2023-09-29 10:36:37,438: train_basin_file: D:\ShuyuChang\AKTemp\Data\Hyperparameter\1_test\train.txt
+2023-09-29 10:36:37,439: validation_basin_file: D:\ShuyuChang\AKTemp\Data\Hyperparameter\1_test\train_val.txt
+2023-09-29 10:36:37,440: test_basin_file: D:\ShuyuChang\AKTemp\Data\Hyperparameter\1_test\test.txt
+2023-09-29 10:36:37,441: train_start_date: 2002-01-01 00:00:00
+2023-09-29 10:36:37,445: train_end_date: 2022-08-01 00:00:00
+2023-09-29 10:36:37,446: validation_start_date: 2002-01-01 00:00:00
+2023-09-29 10:36:37,447: validation_end_date: 2022-08-01 00:00:00
+2023-09-29 10:36:37,448: test_start_date: 2002-01-01 00:00:00
+2023-09-29 10:36:37,448: test_end_date: 2022-09-01 00:00:00
+2023-09-29 10:36:37,450: seed: 42
+2023-09-29 10:36:37,452: device: cuda:1
+2023-09-29 10:36:37,453: validate_every: 0
+2023-09-29 10:36:37,454: validate_n_random_basins: 30
+2023-09-29 10:36:37,455: metrics: ['NSE', 'RMSE', 'KGE']
+2023-09-29 10:36:37,456: model: cudalstm
+2023-09-29 10:36:37,457: head: regression
+2023-09-29 10:36:37,458: output_activation: linear
+2023-09-29 10:36:37,459: hidden_size: 300
+2023-09-29 10:36:37,459: initial_forget_bias: 0
+2023-09-29 10:36:37,460: output_dropout: 0.3
+2023-09-29 10:36:37,461: optimizer: Adam
+2023-09-29 10:36:37,462: loss: RMSE
+2023-09-29 10:36:37,463: allow_subsequent_nan_losses: 80
+2023-09-29 10:36:37,464: learning_rate: 0.000316
+2023-09-29 10:36:37,465: batch_size: 40
+2023-09-29 10:36:37,467: epochs: 8
+2023-09-29 10:36:37,468: clip_gradient_norm: 1
+2023-09-29 10:36:37,469: predict_last_n: 1
+2023-09-29 10:36:37,470: seq_length: 365
+2023-09-29 10:36:37,479: num_workers: 8
+2023-09-29 10:36:37,480: log_interval: 1
+2023-09-29 10:36:37,481: log_tensorboard: True
+2023-09-29 10:36:37,482: log_n_figures: 1
+2023-09-29 10:36:37,483: save_weights_every: 1
+2023-09-29 10:36:37,484: save_validation_results: True
+2023-09-29 10:36:37,485: dataset: generic
+2023-09-29 10:36:37,486: data_dir: D:\ShuyuChang\AKTemp\Data\Hyperparameter\1_test
+2023-09-29 10:36:37,487: forcings: ['maurer', 'daymet', 'nldas']
+2023-09-29 10:36:37,488: dynamic_inputs: ['snow_depth_water_equivalent_mean', 'surface_net_solar_radiation_mean', 'surface_net_thermal_radiation_mean', 'temperature_2m_mean', 'u_component_of_wind_10m_mean', 'v_component_of_wind_10m_mean', 'volumetric_soil_water_layer_1_mean', 'soil_temperature_level_1_mean', 'total_precipitation_sum', 'potential_evaporation_sum', 'surface_runoff_sum', 'sub_surface_runoff_sum']
+2023-09-29 10:36:37,490: target_variables: ['mean_temp_c']
+2023-09-29 10:36:37,491: static_attributes: ['topo_GM90_topo_idx', 'ha_ppd_pk_uav', 'ha_for_pc_use', 'ha_snd_pc_uav', 'ice_PastickAK_probability', 'norm_aet', 'ice_GLIMS_glacier', 'ha_cmi_ix_uyr', 'norm_dis', 'ha_ele_mt_uav', 'ha_snw_pc_uyr', 'latitude', 'ha_tmp_dc_syr', 'ha_cly_pc_uav', 'norm_inundation', 'area_km2', 'ha_wet_pc_ug1', 'ha_nli_ix_uav', 'norm_riverarea', 'ha_pnv_cl_smj', 'ha_lit_cl_smj', 'soil_SG250_soc_15_30', 'soil_Pelletier_sed_thickness', 'ha_lka_pc_sse', 'ha_tmp_dc_s06', 'ha_tmp_dc_s07', 'ha_tmp_dc_s08', 'ha_tmp_dc_s09']
+2023-09-29 10:36:37,492: number_of_basins: 100
+2023-09-29 10:36:37,494: run_dir: D:\ShuyuChang\AKTemp\Output\Final_20230921\runs\Final_20230921_2909_103637
+2023-09-29 10:36:37,495: train_dir: D:\ShuyuChang\AKTemp\Output\Final_20230921\runs\Final_20230921_2909_103637\train_data
+2023-09-29 10:36:37,496: img_log_dir: D:\ShuyuChang\AKTemp\Output\Final_20230921\runs\Final_20230921_2909_103637\img_log
+2023-09-29 10:36:37,598: ### Device cuda:1 will be used for training
+2023-09-29 10:36:37,679: Loading basin data into xarray data set.
+2023-09-29 10:36:45,382: Create lookup table and convert to pytorch tensor
+2023-09-29 10:40:45,902: Epoch 1 average loss: avg_loss: 0.12961, avg_total_loss: 0.12961
+2023-09-29 10:44:35,789: Epoch 2 average loss: avg_loss: 0.09928, avg_total_loss: 0.09928
+2023-09-29 10:48:23,444: Epoch 3 average loss: avg_loss: 0.09163, avg_total_loss: 0.09163
+2023-09-29 10:52:07,997: Epoch 4 average loss: avg_loss: 0.08743, avg_total_loss: 0.08743
+2023-09-29 10:55:51,342: Epoch 5 average loss: avg_loss: 0.08375, avg_total_loss: 0.08375
+2023-09-29 10:59:51,050: Epoch 6 average loss: avg_loss: 0.08114, avg_total_loss: 0.08114
+2023-09-29 11:03:43,907: Epoch 7 average loss: avg_loss: 0.07845, avg_total_loss: 0.07845
+2023-09-29 11:07:37,388: Epoch 8 average loss: avg_loss: 0.07633, avg_total_loss: 0.07633
+2023-09-29 11:23:03,996: Using the model weights from D:\ShuyuChang\AKTemp\Output\Final_20230921\runs\Final_20230921_2909_103637\model_epoch008.pt
+2023-09-29 11:26:03,481: Stored metrics at D:\ShuyuChang\AKTemp\Output\Final_20230921\runs\Final_20230921_2909_103637\test\model_epoch008\test_metrics.csv
+2023-09-29 11:26:03,504: Stored results at D:\ShuyuChang\AKTemp\Output\Final_20230921\runs\Final_20230921_2909_103637\test\model_epoch008\test_results.p
+2023-09-29 12:51:08,077: Created 42 records
+2023-10-01 11:09:25,774: Created 42 records
+2023-10-01 16:52:09,883: Created 42 records

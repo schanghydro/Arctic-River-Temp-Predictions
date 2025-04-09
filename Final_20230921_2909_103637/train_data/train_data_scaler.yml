@@ -1,0 +1,172 @@
+attribute_means:
+  area_km2: 1038.1637672218733
+  ha_cly_pc_uav: 11.7
+  ha_cmi_ix_uyr: 8.73
+  ha_ele_mt_uav: 496.5
+  ha_for_pc_use: 23.99
+  ha_lit_cl_smj: 4.01
+  ha_lka_pc_sse: 21.89425864575651
+  ha_nli_ix_uav: 535.62
+  ha_pnv_cl_smj: 8.1
+  ha_ppd_pk_uav: 10.01386
+  ha_snd_pc_uav: 52.23
+  ha_snw_pc_uyr: 58.03
+  ha_tmp_dc_s06: 98.56955538296356
+  ha_tmp_dc_s07: 121.74019258951417
+  ha_tmp_dc_s08: 109.25955808759832
+  ha_tmp_dc_s09: 63.49826067485186
+  ha_tmp_dc_syr: -12.005392533649108
+  ha_wet_pc_ug1: 12.07
+  ice_GLIMS_glacier: 0.0024747625882248327
+  ice_PastickAK_probability: 10.091971343991812
+  latitude: 61.412368849999986
+  norm_aet: 5.136827184562601
+  norm_dis: 0.13266450861093793
+  norm_inundation: 2.262250334136942
+  norm_riverarea: 2.262250334136942
+  soil_Pelletier_sed_thickness: 9.092137555374658
+  soil_SG250_soc_15_30: 913.4500517257977
+  topo_GM90_topo_idx: -1.266344302739168
+attribute_stds:
+  area_km2: 3214.9332517516336
+  ha_cly_pc_uav: 5.338066081920448
+  ha_cmi_ix_uyr: 31.073992828457534
+  ha_ele_mt_uav: 447.52232606120594
+  ha_for_pc_use: 28.538648258886486
+  ha_lit_cl_smj: 2.3931510017488917
+  ha_lka_pc_sse: 31.68672681101545
+  ha_nli_ix_uav: 998.2576111314249
+  ha_pnv_cl_smj: 1.2018504251546622
+  ha_ppd_pk_uav: 54.94846893576061
+  ha_snd_pc_uav: 11.442305870599842
+  ha_snw_pc_uyr: 18.587741697531246
+  ha_tmp_dc_s06: 14.647614034498183
+  ha_tmp_dc_s07: 12.025167417454737
+  ha_tmp_dc_s08: 12.399143903322559
+  ha_tmp_dc_s09: 20.139630697771175
+  ha_tmp_dc_syr: 34.125856623651636
+  ha_wet_pc_ug1: 18.280781430151443
+  ice_GLIMS_glacier: 0.013002050447340386
+  ice_PastickAK_probability: 17.491616780716882
+  latitude: 2.4361698694539005
+  norm_aet: 10.568836520134553
+  norm_dis: 0.39362466496951054
+  norm_inundation: 10.714060628590165
+  norm_riverarea: 10.714060628590165
+  soil_Pelletier_sed_thickness: 10.822831277811115
+  soil_SG250_soc_15_30: 283.3403032947906
+  topo_GM90_topo_idx: 0.7966186570828544
+xarray_feature_scale:
+  coords: {}
+  attrs: {}
+  dims: {}
+  data_vars:
+    mean_temp_c:
+      dims: []
+      attrs: {}
+      data: 5.343691349029541
+    potential_evaporation_sum:
+      dims: []
+      attrs: {}
+      data: 0.1548031121492386
+    snow_depth_water_equivalent_mean:
+      dims: []
+      attrs: {}
+      data: 238.57330322265625
+    soil_temperature_level_1_mean:
+      dims: []
+      attrs: {}
+      data: 6.41713809967041
+    sub_surface_runoff_sum:
+      dims: []
+      attrs: {}
+      data: 0.07539550215005875
+    surface_net_solar_radiation_mean:
+      dims: []
+      attrs: {}
+      data: 73.89974212646484
+    surface_net_thermal_radiation_mean:
+      dims: []
+      attrs: {}
+      data: 25.0360107421875
+    surface_runoff_sum:
+      dims: []
+      attrs: {}
+      data: 0.05114861577749252
+    temperature_2m_mean:
+      dims: []
+      attrs: {}
+      data: 11.23556137084961
+    total_precipitation_sum:
+      dims: []
+      attrs: {}
+      data: 0.16928689181804657
+    u_component_of_wind_10m_mean:
+      dims: []
+      attrs: {}
+      data: 1.691417932510376
+    v_component_of_wind_10m_mean:
+      dims: []
+      attrs: {}
+      data: 1.6088478565216064
+    volumetric_soil_water_layer_1_mean:
+      dims: []
+      attrs: {}
+      data: 0.06264691054821014
+xarray_feature_center:
+  coords: {}
+  attrs: {}
+  dims: {}
+  data_vars:
+    mean_temp_c:
+      dims: []
+      attrs: {}
+      data: 5.498115062713623
+    potential_evaporation_sum:
+      dims: []
+      attrs: {}
+      data: 0.038300517946481705
+    snow_depth_water_equivalent_mean:
+      dims: []
+      attrs: {}
+      data: 128.6324005126953
+    soil_temperature_level_1_mean:
+      dims: []
+      attrs: {}
+      data: 2.619692087173462
+    sub_surface_runoff_sum:
+      dims: []
+      attrs: {}
+      data: 0.025270607322454453
+    surface_net_solar_radiation_mean:
+      dims: []
+      attrs: {}
+      data: 74.62854766845703
+    surface_net_thermal_radiation_mean:
+      dims: []
+      attrs: {}
+      data: -42.16928482055664
+    surface_runoff_sum:
+      dims: []
+      attrs: {}
+      data: 0.00558923976495862
+    temperature_2m_mean:
+      dims: []
+      attrs: {}
+      data: -0.7438775897026062
+    total_precipitation_sum:
+      dims: []
+      attrs: {}
+      data: 0.0416075736284256
+    u_component_of_wind_10m_mean:
+      dims: []
+      attrs: {}
+      data: -0.5341567397117615
+    v_component_of_wind_10m_mean:
+      dims: []
+      attrs: {}
+      data: -0.27604031562805176
+    volumetric_soil_water_layer_1_mean:
+      dims: []
+      attrs: {}
+      data: 0.3237278461456299

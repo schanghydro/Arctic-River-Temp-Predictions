@@ -1,0 +1,97 @@
+allow_subsequent_nan_losses: 80
+batch_size: 40
+clip_gradient_norm: 1
+commit_hash:
+data_dir: D:\ShuyuChang\AKTemp\Data\Hyperparameter\1_test
+dataset: generic
+device: cuda:1
+dynamic_inputs:
+- snow_depth_water_equivalent_mean
+- surface_net_solar_radiation_mean
+- surface_net_thermal_radiation_mean
+- temperature_2m_mean
+- u_component_of_wind_10m_mean
+- v_component_of_wind_10m_mean
+- volumetric_soil_water_layer_1_mean
+- soil_temperature_level_1_mean
+- total_precipitation_sum
+- potential_evaporation_sum
+- surface_runoff_sum
+- sub_surface_runoff_sum
+epochs: 8
+experiment_name: Final_20230921
+forcings:
+- maurer
+- daymet
+- nldas
+head: regression
+hidden_size: 300
+img_log_dir: 
+  D:\ShuyuChang\AKTemp\Output\Final_20230921\runs\Final_20230921_2909_103637\img_log
+initial_forget_bias: 0
+learning_rate: 0.000316
+log_interval: 1
+log_n_figures: 1
+log_tensorboard: true
+loss: RMSE
+metrics:
+- NSE
+- RMSE
+- KGE
+model: cudalstm
+num_workers: 8
+number_of_basins: 100
+optimizer: Adam
+output_activation: linear
+output_dropout: 0.3
+package_version: 1.9.0
+predict_last_n: 1
+run_dir: D:\ShuyuChang\AKTemp\Output\Final_20230921\runs\Final_20230921_2909_103637
+save_validation_results: true
+save_weights_every: 1
+seed: 42
+seq_length: 365
+static_attributes:
+- topo_GM90_topo_idx
+- ha_ppd_pk_uav
+- ha_for_pc_use
+- ha_snd_pc_uav
+- ice_PastickAK_probability
+- norm_aet
+- ice_GLIMS_glacier
+- ha_cmi_ix_uyr
+- norm_dis
+- ha_ele_mt_uav
+- ha_snw_pc_uyr
+- latitude
+- ha_tmp_dc_syr
+- ha_cly_pc_uav
+- norm_inundation
+- area_km2
+- ha_wet_pc_ug1
+- ha_nli_ix_uav
+- norm_riverarea
+- ha_pnv_cl_smj
+- ha_lit_cl_smj
+- soil_SG250_soc_15_30
+- soil_Pelletier_sed_thickness
+- ha_lka_pc_sse
+- ha_tmp_dc_s06
+- ha_tmp_dc_s07
+- ha_tmp_dc_s08
+- ha_tmp_dc_s09
+target_variables:
+- mean_temp_c
+test_basin_file: D:\ShuyuChang\AKTemp\Data\Hyperparameter\1_test\test.txt
+test_end_date: 01/09/2022
+test_start_date: 01/01/2002
+train_basin_file: D:\ShuyuChang\AKTemp\Data\Hyperparameter\1_test\train.txt
+train_dir: 
+  D:\ShuyuChang\AKTemp\Output\Final_20230921\runs\Final_20230921_2909_103637\train_data
+train_end_date: 01/08/2022
+train_start_date: 01/01/2002
+validate_every: 0
+validate_n_random_basins: 30
+validation_basin_file: D:\ShuyuChang\AKTemp\Data\Hyperparameter\1_test\train_val.txt
+validation_end_date: 01/08/2022
+validation_start_date: 01/01/2002
