@@ -1,4 +1,4 @@
-# Deep Learning Advances Arctic River Temperature Predictions:snowflake::mount_fuji:
+# Deep Learning Advances Arctic River Temperature Predictions:snowflake:
 
 This repository contains the data and code associated with the manuscript titled **"Deep Learning Advances Arctic River Temperature Predictions"**, currently in revision with *Water Resources Research*.
 

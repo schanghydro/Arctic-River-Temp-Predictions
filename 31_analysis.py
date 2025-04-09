@@ -35,7 +35,6 @@ if torch.cuda.is_available():
     import gc
     gc.collect()
 #%%
-
 #Train the LSTM model using the configuration file
 if __name__ == '__main__':
         # by default we assume that you have at least one CUDA-capable NVIDIA GPU
@@ -48,7 +47,8 @@ if __name__ == '__main__':
 
 #%%
 #Evaluate the model on both train and test sets
-run_dir = Path('D:/ShuyuChang/AKTemp/Output/Final_20230921/runs/Final_20230921_2909_103637/')
+
+run_dir = Path('./runs/Final_20230921_2909_103637/')
 eval_run(run_dir=run_dir, period="train")
 eval_run(run_dir=run_dir, period="test")
 
@@ -164,12 +164,12 @@ def read_results(p, epoch,season):
         metrix0a.to_csv(run_dir / "test" / epoch /"all_evaluation_metrix.csv")
     return(results0a, metrix0a )        
     
-read_results("D:/ShuyuChang/AKTemp/Output/Final_20230921/runs/Final_20230921_2909_103637", "model_epoch008","summer")
-read_results("D:/ShuyuChang/AKTemp/Output/Final_20230921/runs/Final_20230921_2909_103637", "model_epoch008","spring")
-read_results("D:/ShuyuChang/AKTemp/Output/Final_20230921/runs/Final_20230921_2909_103637", "model_epoch008","winter")
-read_results("D:/ShuyuChang/AKTemp/Output/Final_20230921/runs/Final_20230921_2909_103637", "model_epoch008","fall")
-results0a, metrix0a =read_results("D:/ShuyuChang/AKTemp/Output/Final_20230921/runs/Final_20230921_2909_103637", "model_epoch008","all")
-read_results_2degree("D:/ShuyuChang/AKTemp/Output/Final_20230921/runs/Final_20230921_2909_103637", "model_epoch008",2)
+read_results("./runs/Final_20230921_2909_103637/", "model_epoch008","summer")
+read_results("./runs/Final_20230921_2909_103637/", "model_epoch008","spring")
+read_results("./runs/Final_20230921_2909_103637/", "model_epoch008","winter")
+read_results("./runs/Final_20230921_2909_103637/", "model_epoch008","fall")
+results0a, metrix0a =read_results("./runs/Final_20230921_2909_103637/", "model_epoch008","all")
+read_results_2degree("./runs/Final_20230921_2909_103637/", "model_epoch008",2)
 
 
 #%%
