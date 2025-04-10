@@ -115,4 +115,4 @@ for j in range(42):  #10 watersheds
             integrated = attribution.sum(axis=1) / n_iter
             eg=np.multiply(integrated ,x[:,l])
             eg_arr[:,j,h,l]=eg#.reshape(365,1,1,1)
-np.save('./runs/inal_20230921_2909_103637/ig.npy', eg_arr)
+np.save('./runs/final_20230921_2909_103637/ig.npy', eg_arr)
