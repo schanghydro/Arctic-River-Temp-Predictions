@@ -1,5 +1,7 @@
 # Deep Learning Advances Arctic River Temperature Predictions
 
+[![DOI](https://zenodo.org/badge/957623666.svg)](https://doi.org/10.5281/zenodo.15186293)
+
 This repository contains the data and code associated with the manuscript titled **"Deep Learning Advances Arctic River Temperature Predictions"**, currently in revision with *Water Resources Research*.
 
 We developed a high-performance Long Short-Term Memory (LSTM) model to improve predictions of river water temperature dynamics in ungauged basins across Alaska. 
