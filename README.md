@@ -22,7 +22,7 @@ The version used for implementation here is v1.9.0.
 
 ## Structure
 
-<img src="./Structure.png" alt="&quot;Repo Structure&quot;" style="zoom:80%;" />
+<img src="./Structure.png" alt="&quot;Repo Structure&quot;" style="zoom:60%;" />
 
 #### Data
 
